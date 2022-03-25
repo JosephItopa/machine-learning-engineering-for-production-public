@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' /home/josephitopa/Documents/Projects/update_project/machine-learning-engineering-for-production-public/course1/week1-ungraded-lab/mlep-w1-lab/bin/python3 "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from tensorflow.lite.toco.python.toco_from_protos import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
